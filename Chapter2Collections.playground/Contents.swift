@@ -8,7 +8,7 @@ var arrayOfInts = [0,1,2,3,4,5,6]                      //Initialize an Array (ty
 var arrayOfDoubles = [0,1,2,3,4.1,5,6]                  //One Double = Array type inferred as Double
 var todoList:[String] = []                              //Specify type of empty Array
 var buttonStates = Array(arrayLiteral: false,false)     //Alternative instantiation syntax
-var buttonStates2 = Array(count: 4, repeatedValue: false)   //Another alternative instantiation syntax
+var buttonStates2 = Array(repeating: false, count: 4)   //Another alternative instantiation syntax
 
 todoList = ["Wash car","Make lunch"]
 //: ### Common Array syntax
@@ -16,10 +16,10 @@ todoList[0]
 todoList.count
 todoList.isEmpty
 todoList.append("Supermarket")
-todoList.insert("Bank", atIndex: 0)
-todoList.removeAtIndex(1)
+todoList.insert("Bank", at: 0)
+todoList.remove(at: 1)
 todoList.contains("Supermarket")
-todoList.indexOf("Make lunch")
+todoList.index(of:"Make lunch")
 //: ### Subscripting ranges
 var extractedInts = arrayOfInts[3...5]                 //Extract elements using range
 arrayOfInts[2...4] = [0]                               //Replace range of elements
@@ -31,7 +31,7 @@ todoList += todoTonight                                 //Use addition assignmen
 for todo in todoList {
     print(todo)
 }
-for (index, todo) in todoList.enumerate() {
+for (index, todo) in todoList.enumerated() {
     print("Item \(index + 1):\(todo)")
 }
 //: ## Sets
@@ -52,10 +52,10 @@ for genre in movieGenres {
 var primaryLight:Set = ["Red","Green","Blue"]
 var primaryPaint:Set = ["Red","Yellow","Blue"]
 
-var common = primaryLight.intersect(primaryPaint)
+var common = primaryLight.intersection(primaryPaint)
 var all = primaryLight.union(primaryPaint)
-var exclusive = primaryLight.exclusiveOr(primaryPaint)
-var unique = primaryLight.subtract(primaryPaint)
+var exclusive = primaryLight.symmetricDifference(primaryPaint)
+var unique = primaryLight.subtracting(primaryPaint)
 //: ### Comparing Sets
 var whiteSauce:Set = ["butter","flour","milk"]
 var scone:Set = ["flour","butter","milk","cream"]
@@ -63,12 +63,12 @@ var biscuit:Set = ["flour","butter","milk"]
 var icecream:Set = ["cream","sugar","vanilla extract","salt"]
 
 whiteSauce == biscuit
-whiteSauce.isSubsetOf(scone)
-scone.isSupersetOf(whiteSauce)
-whiteSauce.isDisjointWith(icecream)
+whiteSauce.isSubset(of:scone)
+scone.isSuperset(of:whiteSauce)
+whiteSauce.isDisjoint(with:icecream)
 //: ## Dictionaries
 //: ### Instantiating a Dictionary
-var languages1:[String:String]                           //Declare a Dictionary
+var languages1:[String:String]                                      //Declare a Dictionary
 var languages = ["eng":"English","esp":"Spanish","ita":"Italian"]   //Initialize a Dictionary
 var languagesEmpty:[String:String] = [:]
 //:### Common Dictionary syntax
@@ -105,7 +105,8 @@ filteredDistances
 var totalDistance = distances.reduce(0,combine: {$0 + $1})
 totalDistance
 //: ### Sort
-var sortedDistances = distances.sort( { $0 > $1 } )
+var sortedDistances = distances.sorted(isOrderedBefore: { $0 > $1 } )
+//var sortedDistances = distances.sort( { $0 > $1 } )
 sortedDistances
 //: ## Tuples
 //: ### Instantiating a Tuple

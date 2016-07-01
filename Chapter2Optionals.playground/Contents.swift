@@ -38,7 +38,7 @@ func getSquareArea(width:Int)->Int {
     }
     return(width*width)
 }
-getSquareArea(10)                               //Experiment <- Make this value less than 0
+getSquareArea(width: 10)                               //Experiment <- Make this value less than 0
 //: ### Guard let statement
 func getSquareArea2(width:Int? = nil)->Int {
     guard let width = width else {
@@ -49,7 +49,7 @@ func getSquareArea2(width:Int? = nil)->Int {
     }
     return(width*width)
 }
-getSquareArea2(10)                              //Experiment <- Make this value less than 0 or nil
+getSquareArea2(width: 10)                              //Experiment <- Make this value less than 0 or nil
 //: ### Guard let with where
 func getSquareArea(width:Int? = nil)->Int {
     guard let width = width where width>0 else {
@@ -70,23 +70,36 @@ var width2:Int!                                  //Implicitly unwrapped optional
 width2 = 5                                       //Experiment <- Comment out this line
 print("Square area is \(width2 * 2)")            //#2
 //: ## Optional chaining
-class Person {
-    var firstChild:Person?
-}
-var person = Person()
-person.firstChild = Person()
-//: ### To get the grandchild, you could use multiple optional binding:
-if let child = person.firstChild, grandchild = child.firstChild {
-    print("They have a grandchild!")
+//: ### With a two-dimensional array:
+var pos = [["O","X","O"],
+           ["X","X","O"],
+           ["X","O","X"]
+]
+//: ### To get the top left pos, you could use multiple optional binding:
+if let firstRow = pos.first, firstPos = firstRow.first {
+    print("In the top left position is a \(firstPos)")
 }
 //: ### OR - you could use optional chaining!
-if let grandchild = person.firstChild?.firstChild {
-    print("They have a grandchild!")
+if let firstPos = pos.first?.first {
+    print("In the top left position is a \(firstPos)")
 }
-if let greatgreatgrandchild = person.firstChild?.firstChild?.firstChild?.firstChild {
-    print("They have a great great grandchild!")
+//: ### Or with a three-dimensional array:
+var pos3D = [[["O","X","O"],["O","X","O"],["O","X","O"]],
+            [["O","X","O"],["O","X","O"],["O","X","O"]],
+            [["O","X","O"],["O","X","O"],["O","X","O"]]
+]
+//: ### With optional chaining, you can just keep on going!
+if let firstPos = pos3D.first?.first?.first {
+    print("On the top left of the first side is a \(firstPos)")
 }
-//: #### Use optional chaining too for setting a value:
-person.firstChild = Person()
-person.firstChild?.firstChild = Person()
-person.firstChild?.firstChild?.firstChild = Person()
+//: #### Do this with any optional property.
+//: #### Here's a two dimensional dictionary:
+var engTo = ["hello": ["esp":"hola","fra":"bonjour","chi":"你好"],
+             "goodbye": ["esp":"adios","fra":"au revoir","chi":"再见"]
+]
+//: #### As getting a dictionary value returns an optional, you can use optional chaining:
+if let helloEsp = engTo["hello"]?["esp"] {
+    print("Hello in Spanish is \(helloEsp)")
+}
+//: #### Use optional chaining to set a value too
+engTo["hello"]?["ita"] = "ciao"
