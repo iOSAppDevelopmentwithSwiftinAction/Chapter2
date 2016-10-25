@@ -28,7 +28,7 @@ if let width = width {
     }
 }
 //: ### Multiple optional binding
-if let width = width, height = height {
+if let width = width, let height = height {
     print("Rectangle area is \(width * height)")
 }
 //: ### Guard statement
@@ -52,7 +52,7 @@ func getSquareArea2(width:Int? = nil)->Int {
 getSquareArea2(width: 10)                              //Experiment <- Make this value less than 0 or nil
 //: ### Guard let with where
 func getSquareArea(width:Int? = nil)->Int {
-    guard let width = width where width>0 else {
+    guard let width = width, width>0 else {
         return(0)
     }
     return(width*width)
@@ -76,7 +76,7 @@ var pos = [["O","X","O"],
            ["X","O","X"]
 ]
 //: ### To get the top left pos, you could use multiple optional binding:
-if let firstRow = pos.first, firstPos = firstRow.first {
+if let firstRow = pos.first, let firstPos = firstRow.first {
     print("In the top left position is a \(firstPos)")
 }
 //: ### OR - you could use optional chaining!
