@@ -102,10 +102,10 @@ returnDistances3
 var filteredDistances = distances.filter( { $0 >= 3 })
 filteredDistances
 //: ### Reduce
-var totalDistance = distances.reduce(0,combine: {$0 + $1})
+var totalDistance = distances.reduce(0,{$0 + $1})
 totalDistance
 //: ### Sort
-var sortedDistances = distances.sorted(isOrderedBefore: { $0 > $1 } )
+var sortedDistances = distances.sorted(by:{ $0 > $1 } )
 //var sortedDistances = distances.sort( { $0 > $1 } )
 sortedDistances
 //: ## Tuples
