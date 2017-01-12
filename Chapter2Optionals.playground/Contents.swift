@@ -6,20 +6,20 @@ var width:Int?
 var height:Int?
 width = 5
 height = Int("10")
-/** print("Square area is \(width * 2)")    //Error - need to unwrap the optional **/
+/** print("Square area is \(width * width)")    //Error - need to unwrap the optional **/
 
 
 //: ## Forced Unwrapping
-print("Square area is \(width! * 2)")
+print("Square area is \(width! * width!)")
 if width != nil {
-    print("Square area is \(width! * 2)")
+    print("Square area is \(width! * width!)")
 }
 //: ## Optional Binding
 if let widthValue = width {
-    print("Square area is \(widthValue * 2)")
+    print("Square area is \(widthValue * widthValue)")
 }
 if let width = width {
-    print("Square area is \(width * 2)")
+    print("Square area is \(width * width)")
 }
 //: ### Pyramid of doom
 if let width = width {
@@ -50,7 +50,7 @@ func getSquareArea2(width:Int? = nil)->Int {
     return(width*width)
 }
 getSquareArea2(width: 10)                              //Experiment <- Make this value less than 0 or nil
-//: ### Guard let with where
+//: ### Guard let with condition
 func getSquareArea(width:Int? = nil)->Int {
     guard let width = width, width>0 else {
         return(0)
@@ -68,7 +68,7 @@ func getUnwrappedWidthNilCoalescing(width:Int? = nil)->Int {
 //: ## Implicitly unwrapped optionals
 var width2:Int!                                  //Implicitly unwrapped optional
 width2 = 5                                       //Experiment <- Comment out this line
-print("Square area is \(width2 * 2)")            //#2
+print("Square area is \(width2 * width2)")            //#2
 //: ## Optional chaining
 //: ### With a two-dimensional array:
 var pos = [["O","X","O"],

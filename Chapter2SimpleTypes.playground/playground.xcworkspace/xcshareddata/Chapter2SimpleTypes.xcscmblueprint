@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D976744FC2FBB50281D60EDB8113497B95B0C571+++8A7BEC4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D976744FC2FBB50281D60EDB8113497B95B0C571+++64A1AE7" : 9223372036854775807,
+    "D976744FC2FBB50281D60EDB8113497B95B0C571+++8A7BEC4" : 9223372036854775807,
+    "D976744FC2FBB50281D60EDB8113497B95B0C571+++06CE2F4" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F55F0566-AE0E-4D0C-A96B-DC7C3114A10F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D976744FC2FBB50281D60EDB8113497B95B0C571+++64A1AE7" : "",
+    "D976744FC2FBB50281D60EDB8113497B95B0C571+++8A7BEC4" : "Chapter2\/",
+    "D976744FC2FBB50281D60EDB8113497B95B0C571+++06CE2F4" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Chapter2SimpleTypes",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Chapter2SimpleTypes.playground",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOSAppDevelopmentwithSwiftinAction\/Chapter2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D976744FC2FBB50281D60EDB8113497B95B0C571+++06CE2F4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOSAppDevelopmentwithSwiftinAction\/Chapter2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D976744FC2FBB50281D60EDB8113497B95B0C571+++64A1AE7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOSAppDevelopmentwithSwiftinAction\/Chapter2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D976744FC2FBB50281D60EDB8113497B95B0C571+++8A7BEC4"
+    }
+  ]
+}
