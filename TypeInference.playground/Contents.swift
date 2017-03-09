@@ -26,8 +26,8 @@ var slicesPerPerson2 = Double(totalPizzaSlices) / Double(numberOfPeople)    //Co
 var name = "Jerry"
 var message = "Welcome, " + name
 var cost = 3.50
-//var message = "Your meal cost $" + cost                                    //Produces error. String can't concatenate with Double
-var message2 = "Your meal cost $" + String(cost)                             //Solution 1: Convert Double to String
-var message3 = "Your meal cost $\(cost)"                                     //Solution 2: String interpolation
+//var message = "Your meal costs $" + cost                                    //Produces error. String can't concatenate with Double
+var message2 = "Your meal costs $" + String(cost)                             //Solution 1: Convert Double to String
+var message3 = "Your meal costs $\(cost)"                                     //Solution 2: String interpolation
 
 
