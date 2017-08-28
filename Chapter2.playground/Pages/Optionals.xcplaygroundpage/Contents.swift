@@ -1,3 +1,7 @@
+/*:
+ [Table of Contents](Table%20of%20Contents) | [Previous](@previous) | [Next](@next)
+ ****
+ */
 //: # Optionals
 //:
 import UIKit
@@ -11,16 +15,13 @@ print("Your \( main!.uppercased() ) is served!")
 if main != nil {
   print("Your \( main!.uppercased() ) is served!")
 }
-
 //: ## Optional Binding
 if let mainValue = main {
   print("Your \( mainValue.uppercased() ) is served!")
 }
-
 if let main = main {
   print("Your \( main.uppercased() ) is served!")
 }
-
 //: ### Pyramid of doom
 var drink:String? = "Malbec"
 if let main = main {
@@ -41,7 +42,7 @@ func serve(drink: String) -> String {
 }
 serve(drink: "Ginger beer")                      //Experiment <- Make the drink KoolAid
 //: ### Guard let statement
-func serve2(drink: String? = nil) -> String {	//#A
+func serve2(drink: String? = nil) -> String {  //#A
   guard let drink = drink else {
     return("No drink for you!")
   }
@@ -53,7 +54,7 @@ func serve2(drink: String? = nil) -> String {	//#A
 serve2(drink: "Santana champ")                  //Experiment <- Make this value nil
 
 //: ### Guard let with condition
-func serve3(drink: String? = nil) -> String {	//#A
+func serve3(drink: String? = nil) -> String {  //#A
   guard let drink = drink,drink != "Kool-Aid" else {
     return("No drink for you!")
   }
@@ -87,3 +88,4 @@ if let firstTable = reserved.first?.first {
   let reservedText = firstTable ? "reserved" : "vacant"
   print("Best table in the house is \(reservedText)!")
 }
+//: [Table of Contents](Table%20of%20Contents) | [Previous](@previous) | [Next](@next)

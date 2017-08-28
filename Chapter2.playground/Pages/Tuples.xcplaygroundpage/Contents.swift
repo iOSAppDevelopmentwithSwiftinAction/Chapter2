@@ -1,7 +1,10 @@
-//: ## Tuples
+/*:
+ [Table of Contents](Table%20of%20Contents) | [Previous](@previous) | [Next](@next)
+ ****
+*/
+//: # Tuples
 //:
 import UIKit
-
 //: ### Working with Tuples
 var meal1:(String,Double)                             //Declare a Tuple. Specify data types of elements.
 var meal2 = ("Turkey chili soup",2.99)                //Initialize a Tuple. Element data types inferred.
@@ -11,14 +14,13 @@ var meal4 = (name:"Bread",price:2)                    //Initialize a Tuple with 
 meal4.price = 3                                       //Set/retrieve tuple values with names
 //: ### Return a tuple from a function
 func chefSpecial() -> (name: String, price: Double) {
-    return (name:"Crab bisque",price:3.99)
+  return (name:"Crab bisque",price:3.99)
 }
 var meal = chefSpecial()
 typealias Meal = (name: String, price: Double)
 func chefSpecial2() ->Meal {
-    return (name:"Crab bisque", price:3.99)
+  return (name:"Crab bisque", price:3.99)
 }
-
 //: ### Tuple tricks: Initialize variables based on a tuple
 var soup = (name:"Jambalaya", price:2.99)
 var (soupName,soupPrice) = soup
@@ -29,7 +31,7 @@ print("\(soupName2) costs $\(soupPrice2)")
 //: ### Tuple tricks: Swap two values using tuples
 var mealLeftHand = "Fish and chips"
 var mealRightHand = "Burger and fries"
-
 (mealLeftHand, mealRightHand) = (mealRightHand, mealLeftHand)
 mealLeftHand
 mealRightHand
+//: [Table of Contents](Table%20of%20Contents) | [Previous](@previous) | [Next](@next)

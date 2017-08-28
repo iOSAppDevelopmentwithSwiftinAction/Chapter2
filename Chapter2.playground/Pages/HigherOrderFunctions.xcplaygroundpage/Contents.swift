@@ -1,15 +1,18 @@
+/*:
+ [Table of Contents](Table%20of%20Contents) | [Previous](@previous)
+ ****
+*/
 //: # Collection Higher Order Functions
 //:
 import UIKit
-
 var prices = [3, 1.99, 2, 1.99, 1.70]
 var updatedPrices: [Double] = []
-for var price in prices {
-    updatedPrices.append(price * 1.1)
+for price in prices {
+  updatedPrices.append(price * 1.1)
 }
 //: ### Map with function
 func updatePrice(price: Double) -> Double {
-    return price * 1.1
+  return price * 1.1
 }
 var updatedPrices2 = prices.map(updatePrice)
 //: ### Map with closure
@@ -20,3 +23,4 @@ var filteredPrices = prices.filter( { $0 >= 5 })
 var totalPrice = prices.reduce(0,{$0 + $1})
 //: ### Sort
 var sortedPrices = prices.sorted(by:{ $0 > $1 } )
+//: [Table of Contents](Table%20of%20Contents) | [Previous](@previous)
