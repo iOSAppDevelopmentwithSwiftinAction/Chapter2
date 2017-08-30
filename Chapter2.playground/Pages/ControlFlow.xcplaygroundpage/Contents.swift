@@ -35,4 +35,10 @@ for bottle in (0..<100).reversed() {
     print("Default is necessary here to make the switch exhaustive.")
   }
 }
+//: ## For in with one-sided range
+var numbers = [0,1,2,3,4]
+for i in numbers[3...] {
+    print(i)
+}
+
 //: [Table of Contents](Table%20of%20Contents) | [Previous](@previous) | [Next](@next)
